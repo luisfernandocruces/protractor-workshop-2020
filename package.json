@@ -25,9 +25,10 @@
   },
   "homepage": "https://github.com/luisVidal97/protactor-workshop-2020#readme",
   "dependencies": {
-    "protractor": "^7.0.0"
+    "jasmine-spec-reporter": "^5.0.2"
   },
   "devDependencies": {
+    "protractor": "^7.0.0",
     "@types/jasminewd2": "^2.0.8",
     "@types/node": "^14.0.25",
     "typescript": "^3.9.7"
