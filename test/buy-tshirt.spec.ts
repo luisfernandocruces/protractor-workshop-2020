@@ -44,7 +44,7 @@ describe('Buy a t-shirt', () => {
     await addressStepPage.goProceedToCheck();
     await(browser.sleep(3000));
 
-    await shippingStepPage.checkInputConditions();
+    await shippingStepPage.acceptTerms();
     await(browser.sleep(3000));
 
     await shippingStepPage.clickProceedToCheckButton();
@@ -54,7 +54,7 @@ describe('Buy a t-shirt', () => {
     await bankPaymentPage.clickConfirmButton();
     await(browser.sleep(3000));
 
-    await expect(orderSummaryPage.getTextOfSelector())
+    await expect(orderSummaryPage.getOrderTitle())
       .toBe('Your order on My Store is complete.');
   });
 });

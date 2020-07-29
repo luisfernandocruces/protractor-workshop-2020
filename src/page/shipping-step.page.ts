@@ -1,16 +1,16 @@
 import { $, ElementFinder } from 'protractor';
 
 export class ShippingStepPage {
-  private checkInputShipping: ElementFinder;
+  private termsOfServiceCheckbox: ElementFinder;
   private proceedToCheckButton: ElementFinder;
 
   constructor () {
-    this.checkInputShipping = $('#cgv');
+    this.termsOfServiceCheckbox = $('#cgv');
     this.proceedToCheckButton = $('#form > p > button > span');
   }
 
-  public async checkInputConditions(): Promise<void> {
-    await this.checkInputShipping.click();
+  public async acceptTerms (): Promise<void> {
+    await this.termsOfServiceCheckbox.click();
   }
 
   public async clickProceedToCheckButton(): Promise<void> {

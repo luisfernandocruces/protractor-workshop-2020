@@ -1,13 +1,13 @@
 import { $, ElementFinder } from 'protractor';
 
 export class OrderSummaryPage {
-  private cartNavigationButton: ElementFinder;
+  private orderTitleLabel: ElementFinder;
 
   constructor () {
-    this.cartNavigationButton = $('#center_column > div > p > strong');
+    this.orderTitleLabel = $('#center_column > div > p > strong');
   }
 
-  public async getTextOfSelector(): Promise<string> {
-    return this.cartNavigationButton.getText();
+  public async  getOrderTitle(): Promise<string> {
+    return this.orderTitleLabel.getText();
   }
 }
