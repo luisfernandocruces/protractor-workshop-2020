@@ -1,4 +1,4 @@
-import { browser } from 'protractor';
+import { browser, ExpectedConditions } from 'protractor';
 import { MenuContentPage,
           ProductListPage,
           ProducAddedModalPage,
@@ -26,7 +26,9 @@ describe('Buy a t-shirt', () => {
   it('then should be bought a t-shirt', async () => {
     await browser.get('http://automationpractice.com/');
     await menuContentPage.goToTShirtMenu();
+    await browser.wait(ExpectedConditions.visibilityOf(productListPage.getAddToCarButton()), 3000);
     await productListPage.goToModal();
+    await browser.wait(ExpectedConditions.visibilityOf(producAddedModalPage.getProceedCheckButton()), 3000);
     await producAddedModalPage.goProceedToCheck();
     await summaryStepPage.toContinueProceedToCheck();
 

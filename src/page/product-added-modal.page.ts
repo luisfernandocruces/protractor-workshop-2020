@@ -8,7 +8,11 @@ export class ProducAddedModalPage{
     this.proceedCheckButton = $('[style*="display: block;"] .button-container > a');
   }
 
-  public async goProceedToCheck(){
+  public getProceedCheckButton() {
+    return this.proceedCheckButton;
+  }
+
+  public async goProceedToCheck() {
     await this.proceedCheckButton.click();
   }
 }
