@@ -4,7 +4,7 @@ export class AddressStepPage {
   private proceedToCheck: ElementFinder;
 
   constructor () {
-    this.proceedToCheck = $('#center_column > form > p > button > span');
+    this.proceedToCheck = $('[name="processAddress"]');
   }
 
   public async goProceedToCheck(): Promise<void> {

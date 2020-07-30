@@ -5,7 +5,7 @@ export class ProducAddedModalPage{
   private proceedCheckButton: ElementFinder;
 
   constructor() {
-    this.proceedCheckButton = $('[style*="display: block;"] .button-container > a');
+    this.proceedCheckButton = $("a[title='Proceed to checkout']");
   }
 
   public getProceedCheckButton() {
